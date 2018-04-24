@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="주소 입력" />
+
+        <Button
+            android:layout_weight="1"
+            android:onClick="addSearch"
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="검색" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/textDataTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="측정날짜"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/textMang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="측정망 정보"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="측정소명"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/textKhaiValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="통합대기환경지수"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/textKhaiGrade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="통합대기환경지수 등급"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/textPm10Value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="미세먼지(PM10, 단위:㎍/㎥)"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/textPm25Value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="초미세먼지(PM25, 단위:㎍/㎥)"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
