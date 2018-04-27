@@ -9,8 +9,12 @@ public class BasicData_All {
     private int totalCount;         // 전체 결과 수
     private String stationName;     // 측정소 명
     private String mangName;        // 측정망
-    private String umdName;         // 주소(읍면동 명)
+    private String sidoName;        // 주소(시,도)
+    private String sggName;         // 주소(시,군,구 명)
+    private String umdName;         // 주소(읍,면,동 명)
     private String dataTime;        // 측정일
+    private double tmX;             // TM_X 좌표
+    private double tmY;             // TM_Y 좌표
     private double so2Value;        // 아황산 가스 농도 (단위 ppm)
     private double coValue;         // 일산화 탄소 농도 (단위 ppm)
     private double o3Value;         // 오존 농도 (단위 ppm)
@@ -19,8 +23,8 @@ public class BasicData_All {
     private double pm10Value24;     // 미세먼지 24시간 예측 농도 (단위 : ㎍/㎥)
     private double pm25Value;       // 미세먼지 농도 (PM2.5) (단위 : ㎍/㎥)
     private double pm25Value24;     // 미세먼지 PM25 24 시간 예측 이동 농도 (단위 : ㎍/㎥)
-    private double khaiValue;       // 통합대기환경 수치
-    private double khaiGrade;       // 통합대기환경 지수
+    private float khaiValue;       // 통합대기환경 수치
+    private float khaiGrade;       // 통합대기환경 지수
     private double so2Grade;        // 아황산 가스 지수
     private double coGrade;         // 일산화 탄소 지수
     private double o3Grade;         // 오존 지수
@@ -30,10 +34,10 @@ public class BasicData_All {
     private double pm10Grade1h;     // 미세먼지 PM10 1시간 등급
     private double pm25Grade1h;     // 미세먼지 PM2.5 1시간 등급
 
+
     /**
      * @ getter / setter
      */
-
     public int getResultCode() {
         return resultCode;
     }
@@ -90,6 +94,22 @@ public class BasicData_All {
         this.mangName = mangName;
     }
 
+    public String getSidoName() {
+        return sidoName;
+    }
+
+    public void setSidoName(String sidoName) {
+        this.sidoName = sidoName;
+    }
+
+    public String getSggName() {
+        return sggName;
+    }
+
+    public void setSggName(String sggName) {
+        this.sggName = sggName;
+    }
+
     public String getUmdName() {
         return umdName;
     }
@@ -104,6 +124,22 @@ public class BasicData_All {
 
     public void setDataTime(String dataTime) {
         this.dataTime = dataTime;
+    }
+
+    public double getTmX() {
+        return tmX;
+    }
+
+    public void setTmX(double tmX) {
+        this.tmX = tmX;
+    }
+
+    public double getTmY() {
+        return tmY;
+    }
+
+    public void setTmY(double tmY) {
+        this.tmY = tmY;
     }
 
     public double getSo2Value() {
@@ -170,19 +206,19 @@ public class BasicData_All {
         this.pm25Value24 = pm25Value24;
     }
 
-    public double getKhaiValue() {
+    public float getKhaiValue() {
         return khaiValue;
     }
 
-    public void setKhaiValue(double khaiValue) {
+    public void setKhaiValue(float khaiValue) {
         this.khaiValue = khaiValue;
     }
 
-    public double getKhaiGrade() {
+    public float getKhaiGrade() {
         return khaiGrade;
     }
 
-    public void setKhaiGrade(double khaiGrade) {
+    public void setKhaiGrade(float khaiGrade) {
         this.khaiGrade = khaiGrade;
     }
 
@@ -260,8 +296,12 @@ public class BasicData_All {
                 ", totalCount=" + totalCount +
                 ", stationName='" + stationName + '\'' +
                 ", mangName='" + mangName + '\'' +
+                ", sidoName='" + sidoName + '\'' +
+                ", sggName='" + sggName + '\'' +
                 ", umdName='" + umdName + '\'' +
                 ", dataTime='" + dataTime + '\'' +
+                ", tmX=" + tmX +
+                ", tmY=" + tmY +
                 ", so2Value=" + so2Value +
                 ", coValue=" + coValue +
                 ", o3Value=" + o3Value +
@@ -282,5 +322,4 @@ public class BasicData_All {
                 ", pm25Grade1h=" + pm25Grade1h +
                 '}';
     }
-
 } // end class BasicData_All

@@ -131,13 +131,13 @@ public class MainActivity extends AppCompatActivity {
                             xpp.next();
                             basicData_all.setPm25Value(Double.parseDouble(xpp.getText()));
 
-                        } else if (tag.equals("KhaiValue")) { // 통합대기환경 수치
+                        } else if (tag.equals("khaiValue")) { // 통합대기환경 수치
                             xpp.next();
-                            basicData_all.setKhaiValue(Double.parseDouble(xpp.getText()));
+                            basicData_all.setKhaiValue(Float.parseFloat(xpp.getText()));
 
-                        } else if (tag.equals("KhaiGrade")) { // 통합대기환경 등급
+                        } else if (tag.equals("khaiGrade")) { // 통합대기환경 등급
                             xpp.next();
-                            basicData_all.setKhaiGrade(Double.parseDouble(xpp.getText()));
+                            basicData_all.setKhaiGrade(Float.parseFloat(xpp.getText()));
 
                         }
                         break;
